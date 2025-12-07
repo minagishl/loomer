@@ -51,6 +51,11 @@ function renderDocument(
   return parts.filter(Boolean).join('\n\n').trim();
 }
 
+function renderBanner(doc: LoomerDocument, format: LoomerFormat): string {
+  if (format === 'json') return doc.source;
+  return ['---', doc.source, '---'].join('\n');
+}
+
 export function mergeDocuments(
   documents: LoomerDocument[],
   options: MergeOptions
@@ -71,7 +76,12 @@ export function mergeDocuments(
     };
   }
 
-  const rendered = normalized.map((doc) => renderDocument(doc, format, options.includeMetadata));
-  const content = rendered.join('\n\n---\n\n').trim();
+  const rendered = normalized.map((doc) => {
+    const banner = renderBanner(doc, format);
+    const body = renderDocument(doc, format, options.includeMetadata);
+    return [banner, body].filter(Boolean).join('\n\n').trim();
+  });
+
+  const content = rendered.join('\n\n').trim();
   return { content, format };
 }

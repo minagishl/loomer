@@ -34,6 +34,15 @@ Merge as plain text:
 bun src/index.ts merge a.txt b.yaml --format txt
 ```
 
+Every merged file is prefixed with its path for clarity:
+
+```
+---
+/public/article.md
+---
+<file contents...>
+```
+
 Inspect how Loomer sees a file:
 
 ```bash
