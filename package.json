@@ -6,6 +6,23 @@
   "bin": {
     "loomer": "./dist/index.js"
   },
+  "keywords": [
+    "cli",
+    "merge",
+    "concatenate",
+    "files",
+    "tooling"
+  ],
+  "author": "minagishl",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/minagishl/loomer.git"
+  },
+  "homepage": "https://github.com/minagishl/loomer#readme",
+  "bugs": {
+    "url": "https://github.com/minagishl/loomer/issues"
+  },
   "scripts": {
     "start": "bun dist/index.js",
     "dev": "bun run start",
