@@ -73,3 +73,7 @@ bun test
 - `src/cli` CLI wiring for merge/inspect/version commands
 - `src/utils` shared helpers
 - `src/index.ts` CLI entrypoint
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
