@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Post-merge optimizer to normalize whitespace, indentation, and spacing while preserving fenced code blocks
+- Output formatter supporting `markdown`, `text`, `html`, and structured `json` responses (HTML wraps merged markdown, text strips markdown markers)
+- CLI flag `--optimize` to enable text optimization in merge output
+
+### Changed
+
+- `merge` now uses format-aware output handling with optimized markdown as the base
+
 ## [v0.1.1] - 2025-12-08
 
 ### Added

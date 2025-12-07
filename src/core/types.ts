@@ -1,4 +1,4 @@
-export type LoomerFormat = 'txt' | 'md' | 'json';
+export type OutputFormat = 'markdown' | 'text' | 'html' | 'json';
 
 export type FileType = 'markdown' | 'html' | 'json' | 'yaml' | 'text';
 
@@ -17,6 +17,19 @@ export interface LoomerDocument {
 }
 
 export interface MergeOptions {
-  format: LoomerFormat;
   includeMetadata?: boolean;
+}
+
+export interface MergeResult {
+  content: string;
+  documents: LoomerDocument[];
+}
+
+export interface MergeMetadata {
+  fileCount: number;
+  timestamp: string;
+}
+
+export interface OptimizeOptions {
+  collapseSpaces?: boolean;
 }

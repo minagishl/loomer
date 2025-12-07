@@ -43,7 +43,13 @@ loomer merge docs/ --out combined.txt
 Merge as plain text:
 
 ```bash
-loomer merge a.txt b.yaml --format txt
+loomer merge a.txt b.yaml --format text
+```
+
+Render as HTML:
+
+```bash
+loomer merge docs/ --format html --out merged.html
 ```
 
 Every merged file is prefixed with its path for clarity:
@@ -70,8 +76,9 @@ loomer version
 ### Options
 
 - `--out` to write to a file (otherwise prints to stdout)
-- `--format` choose `md`, `txt`, or `json` (defaults to `md` or derived from `--out`)
+- `--format` choose `markdown`, `text`, `html`, or `json` (defaults to `markdown` or derived from `--out`)
 - `--metadata` include parsed metadata in the merged output
+- `--optimize` enable text optimization (collapse excess whitespace, normalize indentation; code fences are preserved)
 
 ## Development
 
