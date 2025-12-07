@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v0.1.1] - 2025-12-08
+
+### Added
+
+- Package metadata for publication (keywords, author, license, repository, homepage, issue tracker)
+
+### Changed
+
+- Distribution settings to expose built outputs (`main`/`module`/`types`) and ship `dist` files for consumers
+
 ## [v0.1.0] - 2025-12-08
 
 ### Added
@@ -23,4 +33,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Default merge target is `merged.md` when `--out` is not provided (use `--out -` for stdout)
 
+[Unreleased]: https://github.com/minagishl/loomer/compare/v0.1.1...HEAD
+[v0.1.1]: https://github.com/minagishl/loomer/compare/v0.1.0...v0.1.1
 [v0.1.0]: https://github.com/minagishl/loomer/releases/tag/v0.1.0
