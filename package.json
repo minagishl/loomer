@@ -1,0 +1,33 @@
+{
+  "name": "loomer",
+  "version": "0.1.0",
+  "description": "Merge multiple files into one AI-optimized document.",
+  "type": "module",
+  "bin": {
+    "loomer": "./dist/index.js"
+  },
+  "scripts": {
+    "start": "bun dist/index.js",
+    "dev": "bun run start",
+    "test": "bun test",
+    "lint": "eslint . --ext .ts,.tsx",
+    "lint:fix": "eslint . --ext .ts,.tsx --fix",
+    "format": "prettier --check \"**/*.{ts,tsx,js,json,md,yml,yaml}\"",
+    "format:write": "prettier --write \"**/*.{ts,tsx,js,json,md,yml,yaml}\"",
+    "build": "bun scripts/build.mjs"
+  },
+  "dependencies": {
+    "commander": "^11.1.0",
+    "node-html-parser": "^6.1.11",
+    "yaml": "^2.4.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.10",
+    "@typescript-eslint/eslint-plugin": "^8.48.1",
+    "@typescript-eslint/parser": "^8.48.1",
+    "esbuild": "^0.27.1",
+    "eslint": "^9.39.1",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.7.4"
+  }
+}
