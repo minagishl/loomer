@@ -1,6 +1,6 @@
 {
   "name": "loomer",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Merge multiple files into one AI-optimized document.",
   "type": "module",
   "bin": {
